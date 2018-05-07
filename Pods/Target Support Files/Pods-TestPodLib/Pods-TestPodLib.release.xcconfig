@@ -1,0 +1,12 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/MGJRouter" "${PODS_CONFIGURATION_BUILD_DIR}/OTBase" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit" "${PODS_CONFIGURATION_BUILD_DIR}/SocketRocket" "${PODS_CONFIGURATION_BUILD_DIR}/Then" "${PODS_CONFIGURATION_BUILD_DIR}/ZMBase" "${PODS_CONFIGURATION_BUILD_DIR}/jetfire" "${PODS_ROOT}/Loan_iOS_Custom_Framework/Loan_iOS_Custom_Framework/Loan_OCFTFaceDetect/Loan_OCFTFaceDetect"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Loan_iOS_Custom_Framework"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/MGJRouter/MGJRouter.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/OTBase/OTBase.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SocketRocket/SocketRocket.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Then/Then.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/ZMBase/ZMBase.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/jetfire/jetfire.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Loan_iOS_Custom_Framework"
+OTHER_LDFLAGS = $(inherited) -framework "MGJRouter" -framework "OCFTFaceDetect" -framework "OTBase" -framework "SnapKit" -framework "SocketRocket" -framework "Then" -framework "ZMBase" -framework "jetfire"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
