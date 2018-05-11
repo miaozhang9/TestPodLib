@@ -18,6 +18,7 @@
 /* Begin PBXFileReference section */
 		3C882125ED8702E2B09BECAD /* Pods-TestPodLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPodLib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPodLib/Pods-TestPodLib.debug.xcconfig"; sourceTree = "<group>"; };
 		98E7F11846FF4BFF0C8EEDFF /* Pods-TestPodLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPodLib.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestPodLib/Pods-TestPodLib.release.xcconfig"; sourceTree = "<group>"; };
+		9B1AB1E620A433AF00FC9D1E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9BCF0910204D51F70047457D /* TestPodLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPodLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BCF0913204D51F70047457D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BCF0915204D51F70047457D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		AC2E417FAF4193BF30682625 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B1AB1E620A433AF00FC9D1E /* AVFoundation.framework */,
 				AC4F9003CF39256BCFAE3A7F /* Pods_TestPodLib.framework */,
 			);
 			name = Frameworks;
@@ -99,7 +101,6 @@
 				9BCF090C204D51F70047457D /* Sources */,
 				9BCF090D204D51F70047457D /* Frameworks */,
 				9BCF090E204D51F70047457D /* Resources */,
-				6121C89E90AB2CA791DA9FD7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,7 +123,7 @@
 				TargetAttributes = {
 					9BCF090F204D51F70047457D = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -158,38 +159,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6121C89E90AB2CA791DA9FD7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TestPodLib/Pods-TestPodLib-frameworks.sh",
-				"${PODS_ROOT}/Loan_iOS_Custom_Framework/Loan_iOS_Custom_Framework/Loan_OCFTFaceDetect/Loan_OCFTFaceDetect/OCFTFaceDetect.framework",
-				"${BUILT_PRODUCTS_DIR}/MGJRouter/MGJRouter.framework",
-				"${BUILT_PRODUCTS_DIR}/OTBase/OTBase.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
-				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
-				"${BUILT_PRODUCTS_DIR}/ZMBase/ZMBase.framework",
-				"${BUILT_PRODUCTS_DIR}/jetfire/jetfire.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCFTFaceDetect.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGJRouter.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OTBase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZMBase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jetfire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestPodLib/Pods-TestPodLib-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BED5714D4A5150A504FE4C93 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,11 +323,15 @@
 			baseConfigurationReference = 3C882125ED8702E2B09BECAD /* Pods-TestPodLib.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: huang shiguang (P4M8L4H7K2)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TestPodLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.PA.TestPodLib;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.PersonalCenter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = devPersonalCenter;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -369,11 +342,15 @@
 			baseConfigurationReference = 98E7F11846FF4BFF0C8EEDFF /* Pods-TestPodLib.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: huang shiguang (P4M8L4H7K2)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TestPodLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.PA.TestPodLib;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.PersonalCenter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = devPersonalCenter;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

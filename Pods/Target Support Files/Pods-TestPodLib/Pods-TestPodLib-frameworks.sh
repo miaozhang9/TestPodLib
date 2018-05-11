@@ -141,27 +141,6 @@ strip_invalid_archs() {
   STRIP_BINARY_RETVAL=1
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${PODS_ROOT}/Loan_iOS_Custom_Framework/Loan_iOS_Custom_Framework/Loan_OCFTFaceDetect/Loan_OCFTFaceDetect/OCFTFaceDetect.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MGJRouter/MGJRouter.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/OTBase/OTBase.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Then/Then.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ZMBase/ZMBase.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/jetfire/jetfire.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${PODS_ROOT}/Loan_iOS_Custom_Framework/Loan_iOS_Custom_Framework/Loan_OCFTFaceDetect/Loan_OCFTFaceDetect/OCFTFaceDetect.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MGJRouter/MGJRouter.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/OTBase/OTBase.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Then/Then.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ZMBase/ZMBase.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/jetfire/jetfire.framework"
-fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
 fi
