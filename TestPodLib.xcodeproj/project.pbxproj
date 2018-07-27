@@ -131,7 +131,6 @@
 				9BCF090D204D51F70047457D /* Frameworks */,
 				9BCF090E204D51F70047457D /* Resources */,
 				9B04E82120EA109C005F52A1 /* Embed Frameworks */,
-				F62EA20972F3745F35D81CEA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,26 +205,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F62EA20972F3745F35D81CEA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TestPodLib/Pods-TestPodLib-frameworks.sh",
-				"${PODS_ROOT}/YYStudio_LoanSDK_All/YYStudio_LoanSDK_All/FaceRecognitionLib/OCFTFaceDetect.framework",
-				"${BUILT_PRODUCTS_DIR}/YYStudio_LoanSDK_All/YYStudio_LoanSDK_All.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCFTFaceDetect.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYStudio_LoanSDK_All.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestPodLib/Pods-TestPodLib-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

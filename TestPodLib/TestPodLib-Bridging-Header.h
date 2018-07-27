@@ -5,7 +5,7 @@
 #ifndef TestPodLib_Bridging_Header_h
 #define TestPodLib_Bridging_Header_h
 
-#import "QHLoanDoor.h"
+//#import "QHLoanDoor.h"
 //#import <YYStudio_LoanSDK_All/QHLoanDoor.h>
 //#import <YYStudio_LoanSDK_All/QHLoanDoor.h>
 

@@ -1,6 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 source 'https://github.com/CocoaPods/Specs.git'
-source 'http://10.11.180.29/mobileDevelopers/YZT-Loan-Pod-Spec.git'
+#source 'http://10.11.180.29/mobileDevelopers/YZT-Loan-Pod-Spec.git'
 
 #source 'https://github.com/miaozhang9/ZMSpecccc.git'
 platform :ios, '9.0'
@@ -14,7 +14,7 @@ target 'TestPodLib' do
 #pod 'OTBase','~> 0.1.0'
 #pod 'Loan_iOS_Custom_Framework'
 #pod 'YYStudio_LoanSDK'
-pod 'YYStudio_LoanSDK_All'
+#pod 'YYStudio_LoanSDK_All'
 end
 
 post_install do |installer|
@@ -31,3 +31,19 @@ end
 
 
 
+#Swift项目pod OC库注意事项：
+#1.桥接文件中要直接#import “xxx.h”而不是#import <xxx/xxx.h>
+#2.Buidle setting  Allow Non-modular includes in Framework Modules 设为Yes
+#User Header Search Paths  ${SRCROOT}    recursive
+#要满足以上
+#3.post_install do |installer|
+#    installer.pods_project.targets.each do |target|
+#        target.build_configurations.each do |config|
+#            config.build_settings['SWIFT_VERSION'] = '4.0'
+#            # 解决打包第三方framework签名问题
+#            config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
+#            config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
+#            config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
+#        end
+#    end
+#end
